@@ -18,6 +18,6 @@ app.listen(3000, function(){
 });
 
 
-app.get('/eingabe', function(req, res){
-	res.sendfile(__dirname + '/eingabe.html');
+app.get('/', function(req, res){
+	res.sendfile(__dirname + '/index.html');
 });
