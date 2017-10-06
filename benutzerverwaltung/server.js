@@ -17,7 +17,13 @@ app.listen(3000, function(){
 	console.log("listening on 3000");
 });
 
+//TingoDB hinzufügen
+const DB_COLLECTION = "benutzerverwaltung";
+const Db = require("tingodb")().Db;
+const db = new Db(__dirname + "/tingodb", {});
+const ObjectID = require("tingodb")().ObjectID;
 
-app.get('/', function(req, res){
-	res.sendfile(__dirname + '/index.html');
+app.get('/', (request, response) =>{
+	response.sendfile(__dirname + '/index.html');
 });
+
