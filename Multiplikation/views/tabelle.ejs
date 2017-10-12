@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabelle</title>
+	</head>
+	<h2>Ergebnis-Tabelle</h2>
+	<body style="background-color: grey;">
+		<table border="2">	
+			<% for(var i = 1; i <= spalten ; i++) { %>
+				<tr border="2">
+					<% for(var k = 1; k <= zeilen; k++) { %>
+						<td> <%= i*k %> </td> 
+					<% } %>	
+				</tr>		
+			<% } %>
+		</table>
+		<br><a href="/"> Neue Tabelle </a></br>
+	</body>
+</html>

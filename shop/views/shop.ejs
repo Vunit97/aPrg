@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Warenkor</title>
+	</head>
+	<h2>Gewünschte Ware</h2>
+	<body>
+		<table>	
+		<tr>
+		<th>Artikel</th>
+		<th>Preis</th>	<br/>
+		</tr>
+
+		<% for(var i = 0; i < products.length; i++){ %>
+		<tr>
+			<td><%= products[i].artikel%></td>
+
+			<td><%=products[i].preis%></td>	
+		</tr>
+		<td>
+			<form action=" <%= '/deleteProduct/' + products[i]._id %>" method= "post">
+				<button class="delete is-large" type="submit">Delete this shit</button>
+			</form>
+		</td>
+		<%}%>
+	</table>
+	<br><a href="/"> Back to the Shop </br>
+	</body>
+</html>

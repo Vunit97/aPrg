@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Adresseingabe</title>
+    </head>
+    <body>
+        <ul>
+            <% for (let i=0; i < errors.length; i++) { %>
+                <li><%= errors[i] %></li>
+            <% } %>
+        </ul>
+        <form action="checkAddress" method="post">
+            Name: <input type="text" name="name" value=<%= name %>> <br>
+            Straße: <input type="text" name="street" value=<%= street %>> <br>
+            Ort: <input type="text" name="place" value=<%= place %>> <br>
+            E-Mail: <input type="text" name="email" value=<%= email %>> <br>
+            <button type="submit">Adresse prüfen</button>
+        </form>
+    </body>
+</html>
